@@ -18,7 +18,7 @@ insert into address_book values
 ('Pranav','Jaguste','Mulund','Mumbai','Mh','400081','1234567890','pj@gmail.com'),
 ('Someone','Anonymous','Andheri','Mumbai','Mh','400058','9876543210','some@gmail.com')
 
-select* from address_book;
+select * from address_book;
 
 update address_book set address = 'Malad' where first_name = 'Someone';
 
@@ -29,3 +29,8 @@ insert into address_book values
 ('Rahul','Sharma','Kurla','Kerela','Kl','987654','2323232323','rahul@gmail.com');
 
 select * from address_book where city = 'Delhi';
+
+select COUNT(City),city from address_book group by city;
+
+
+select COUNT(state),state from address_book group by state;
