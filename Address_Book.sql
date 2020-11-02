@@ -21,3 +21,5 @@ insert into address_book values
 select* from address_book;
 
 update address_book set address = 'Malad' where first_name = 'Someone';
+
+delete from address_book where first_name = 'Someone';
