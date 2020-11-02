@@ -32,5 +32,6 @@ select * from address_book where city = 'Delhi';
 
 select COUNT(City),city from address_book group by city;
 
-
 select COUNT(state),state from address_book group by state;
+
+select * from address_book order by city asc;
