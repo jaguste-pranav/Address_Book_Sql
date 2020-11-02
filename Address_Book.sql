@@ -23,3 +23,9 @@ select* from address_book;
 update address_book set address = 'Malad' where first_name = 'Someone';
 
 delete from address_book where first_name = 'Someone';
+
+insert into address_book values
+('Ram','Shyam','Andheri','Delhi','Dl','123456','1212121212','ram@gmail.com'),
+('Rahul','Sharma','Kurla','Kerela','Kl','987654','2323232323','rahul@gmail.com');
+
+select * from address_book where city = 'Delhi';
