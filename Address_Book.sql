@@ -14,6 +14,8 @@ phone_no varchar(10) not null,
 email varchar(15) not null
 );
 
+alter table address_book alter column email varchar(25); 
+
 insert into address_book values
 ('Pranav','Jaguste','Mulund','Mumbai','Mh','400081','1234567890','pj@gmail.com'),
 ('Someone','Anonymous','Andheri','Mumbai','Mh','400058','9876543210','some@gmail.com')
@@ -35,3 +37,15 @@ select COUNT(City),city from address_book group by city;
 select COUNT(state),state from address_book group by state;
 
 select * from address_book order by city asc;
+
+alter table address_Book add Contact_Type varchar(20);
+
+update address_book set Contact_Type ='Family' where first_name = 'Pranav' or first_name = 'Rahul';
+update address_book set Contact_Type ='Friend' where first_name in ('Ram');
+
+alter table address_Book add Book_Name varchar(20);
+update address_book set Book_Name ='Home A. Book' where first_name = 'Pranav' or first_name = 'Rahul';
+update address_book set Book_Name ='College A. Book' where first_name in ('Ram');
+
+select Contact_Type, COUNT(Contact_Type) from address_book group by Contact_Type;
+
