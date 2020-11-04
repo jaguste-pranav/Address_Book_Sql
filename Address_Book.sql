@@ -40,11 +40,12 @@ select * from address_book order by city asc;
 
 alter table address_Book add Contact_Type varchar(20);
 
-update Address_Book set Contact_Type ='Family' where first_name = 'Pranav' or first_name = 'Rahul';
-update Address_Book set Contact_Type ='Friend' where first_name in ('Ram');
+update address_book set Contact_Type ='Family' where first_name = 'Pranav' or first_name = 'Rahul';
+update address_book set Contact_Type ='Friend' where first_name in ('Ram');
 
 alter table address_Book add Book_Name varchar(20);
-update Address_Book set Book_Name ='Home A. Book' where first_name = 'Pranav' or first_name = 'Rahul';
-update Address_Book set Book_Name ='College A. Book' where first_name in ('Ram');
+update address_book set Book_Name ='Home A. Book' where first_name = 'Pranav' or first_name = 'Rahul';
+update address_book set Book_Name ='College A. Book' where first_name in ('Ram');
 
+select Contact_Type, COUNT(Contact_Type) from address_book group by Contact_Type;
 
